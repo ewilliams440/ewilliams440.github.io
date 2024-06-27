@@ -4,3 +4,9 @@
 .myClass{
 	color:blue;
 }
+p{
+	float:left;
+}
+img{
+	float:right;
+}
