@@ -1,45 +1,19 @@
 <html>
     <head>
-	    <title> Title </title>
-	    <link rel="stylesheet" href="index.css"/>
+        <script>
+            // Code here!
+        </script>
     </head>
     <body>
-	    <!-- This is a comment!-->
-	    <h1 id=myID> This is a heading </h1>
-	    <img src="itsgivingthanks.jpg" alt="This is an image" width="150" height="200">
-	    <p class=myClass> This is a paragraph, colored blue. Float is a CSS positioning property. To understand its purpose and origin, we can look to print design. In a print layout, images may be set into the page such that text wraps around them as needed. This is commonly and appropriately called “text wrap”. Here is an example of that. In page layout programs, the boxes that hold the text can be told to honor the text wrap, or to ignore it. Ignoring the text wrap will allow the words to flow right over the image like it wasn’t even there. This is the difference between that image being part of the flow of the page (or not). Web design is very similar. </p>
-	    <form>
-	    <label for="answer">This is a text form:</label><br>
-	    <input type="text" id="answer" name="answer">
-    	    </form>
-	    <p class=myClass> Below is a radio form </p>
-	    <form>  
-		<input type="radio"  id="option1"  name="year"  value="1">  
-		<label for="option1">Option 1</label><br>  
-		<input type="radio"  id="option2"  name="year"  value="2">  
-		<label for="option2">Option 2</label><br>  
-		<input type="radio"  id="option3"  name="year"  value="3">  
-		<label for="option3">Option three~</label><br>  
-		<input type="radio"  id="option4"  name="year"  value="4">  
-		<label for="option4">Option 4</label><br>
-		<input type="radio"  id="option5"  name="year"  value="5">  
-		<label for="option5">Option 5</label>
-	    </form>
-	    <p class=myClass> Below is a checkbox form </p>
-	    <form>  
-		<input type="checkbox"  id="pet1"  name="pet1"  value="cat">  
-		<label for="pet1">Cat</label><br>  
-		<input type="checkbox"  id="pet2"  name="pet2"  value="dog">  
-		<label for="pet2">Dog</label><br>  
-		<input type="checkbox"  id="pet3"  name="pet3"  value="fish">  
-		<label for="pet3">Fish</label><br>
-		<input type="checkbox"  id="pet4"  name="pet4"  value="hamster">  
-		<label for="pet4">Hamster</label><br>
-		<input type="checkbox"  id="pet5"  name="pet5"  value="rabbit">  
-		<label for="pet5">Rabbit</label>
-	    </form>
-	    <button>/This is a button</button>
+        <h1>Enter your ~personal information~ below:</h1>
+        <form name="form" onsubmit = "you probably want to call a function here!" method = "post">
+            Name: <input type="text" name="fname">
+            Age:  <input type="text" name="age">
+            Phone Number: <input type="text" name="phone">
+            <input type="submit" value="Submit">
+        </form>
     </body>
+</html>
     <script>
 	    document.querySelector('button').onclick = function() {alert('button function');}
     </script>
