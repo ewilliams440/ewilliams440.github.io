@@ -1,12 +1,67 @@
 <html>
     <head>
         <script>
-            // Code here!
+            function validateForm(){
+		    var x = document.forms["form"]["fname"].value
+		    if (x == "") {
+    			alert("Name is required")
+    			return false
+  		    }
+ 	 	    else if (!isNaN(parseFloat(n))){
+    			alert("Name must be non-numeric")
+    			return false
+  		    }
+		    var x = document.forms["form"]["age"].value
+		    if (isNaN(x)){
+			    alert("Age must be an positive integer")
+			    return false
+		    }
+		    else if (x<0){
+			    alert("Age must be a positive integer")
+			    return false
+		    }
+		    var x = document.forms["form"]["phone"].value
+		    if (isNaN(x)){
+			    //if in form (xxx)xxx-xxxx
+			    if (x.substring(0,1)=="(" && x.substring(4,5)==")"){
+				    if(isNaN(x.substring(1,4))){
+					    alert("Please type phone number in one of the following formats: (xxx)xxx-xxxx, xxx-xxx-xxxx, xxxxxxxxxx")
+					    return false
+				    }
+				    //area code is in format
+				    if(isNaN(x.substring(5,8)) || isNaN(x.substring(9,12)) || x.substring(8,9)!="-"){
+					    alert("Please type phone number in one of the following formats: (xxx)xxx-xxxx, xxx-xxx-xxxx, xxxxxxxxxx")
+					    return false
+				    }
+				    //everything in format
+			    }
+			    //if in form xxx-xxx-xxxx
+			    else if (!isNaN(x.substring(0,3)) && x.substring(3,4)=="-"){
+				    //area code is in format
+				    if(isNaN(x.substring(4,7)) || isNaN(x.substring(8,11)) || x.substring(7,8)!="-"){
+					    alert("Please type phone number in one of the following formats: (xxx)xxx-xxxx, xxx-xxx-xxxx, xxxxxxxxxx")
+					    return false
+				    }
+				    //everything in format
+			    }
+			    else{
+				    alert("Please type phone number in one of the following formats: (xxx)xxx-xxxx, xxx-xxx-xxxx, xxxxxxxxxx")
+				    return false
+			    }
+		    }
+		    else {
+			    var phone = x.toString(2)
+			    if (phone.length!=10){
+				    alert("Phone number must be 10 digits")
+				    return false
+			    }
+		    }
+	    }
         </script>
     </head>
     <body>
         <h1>Enter your ~personal information~ below:</h1>
-        <form name="form" onsubmit = "you probably want to call a function here!" method = "post">
+        <form name="form" onsubmit = "return validateForm()" method = "post">
             Name: <input type="text" name="fname">
             Age:  <input type="text" name="age">
             Phone Number: <input type="text" name="phone">
