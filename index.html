@@ -1,7 +1,15 @@
 <html>
     <body>
-        <h1>trying</h1>
+        <h1>Title</h1>
+        <p>...where am I?</p>
         <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000;"></canvas>
     </body>
-    <a href='newpage.html'> Next Page </a>
+    <a href='newpage.html'> Look around </a>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(200, 0);
+        ctx.lineTo(200, 500);
+        ctx.stroke();
+    </script>
 </html>
