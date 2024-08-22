@@ -1,3 +1,13 @@
 <html>
-  
+  <body>
+        <p>There's nothing here. Just the train tracks and this bridge. Everything else is just... gray.</p>
+        <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000;"></canvas>
+    </body>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 200);
+        ctx.lineTo(500, 200);
+        ctx.stroke();
+    </script>
 </html>
