@@ -9,7 +9,13 @@
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
         ctx.moveTo(0, 200);
-        ctx.lineTo(500, 200);
+        ctx.lineTo(1000, 200);
+        ctx.stroke();
+        ctx.moveTo(500, 200);
+        ctx.lineTo(0, 500);
+        ctx.stroke();
+        ctx.moveTo(500, 200);
+        ctx.lineTo(1000, 500);
         ctx.stroke();
     </script>
 </html>
